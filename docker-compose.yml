@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14.2
+    container_name: mtapp_pg
+    ports:
+      - 3006:5432
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data/pgdata
+      - ./db:/db
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=mtapp_db
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
+  app:
+    build: ./
+    container_name: mtapp_app
+    ports:
+      - 1234:1234
+
+networks:
+  default:
+    external:
+      name: mr
