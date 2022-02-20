@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compliment</title>
+</head>
+<body>
+<table>
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th> COMPLIMENT </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="compliment : ${compliments}">
+            <td><span th:text="${compliment.key}"> ID </span></td>
+            <td><span th:text="${compliment.value}"> COMPLIMENT </span></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

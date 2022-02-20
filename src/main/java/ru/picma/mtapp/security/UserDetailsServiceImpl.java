@@ -7,6 +7,12 @@ import org.springframework.stereotype.Service;
 import ru.picma.mtapp.model.User;
 import ru.picma.mtapp.repo.UserRepo;
 
+/**
+ * Class {@code UserDetailsServiceImpl} is implementation UserDetailsService for Spring Security.
+ *
+ * @author  pic
+ * @since   0.0.1
+ */
 @Service("userDetailsServiceImpl")
 public class UserDetailsServiceImpl implements UserDetailsService {
 

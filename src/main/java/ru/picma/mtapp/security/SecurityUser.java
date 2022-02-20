@@ -7,6 +7,12 @@ import ru.picma.mtapp.model.User;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * Class {@code SecurityUser} is wrapper over the User class for spring security.
+ *
+ * @author  pic
+ * @since   0.0.1
+ */
 public class SecurityUser implements UserDetails {
 
     private String username;
